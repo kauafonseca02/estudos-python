@@ -1,5 +1,5 @@
 # ============================================================
-# DIA 10 — WHILE + def + for
+# DIA 12 — WHILE + def + for
 # ============================================================
 
 # # Exercício 1: Cadastro e análise de números
@@ -436,3 +436,53 @@
 #     result = f"\nO produto {nome_busca} aparece {quantidade_encontrada} vezes."
 
 # print(result)
+
+## Exercício único: análise de números
+
+numeros = []
+c = 0
+
+qt = int(input("\nQuantos números deseja cadastrar? "))
+
+if qt <= 0:
+    print("\nQuantidade igual ou menor que 0. Encerrando o sistema, até mais. \n")
+else:
+    while c < qt:
+        numero = int(input("Digite um número: "))
+        numeros.append(numero)
+        c += 1
+
+    def analisar_numeros(numeros):
+        soma = 0
+        maior = numeros[0]
+        menor = numeros[0]
+        qt_pares = 0
+        soma_positivos = 0
+
+        for numero in numeros:
+            soma += numero
+
+            if numero > maior:
+                maior = numero
+
+            if numero < menor:
+                menor = numero
+
+            if numero % 2 == 0:
+                qt_pares += 1
+
+            if numero > 0:
+                soma_positivos += numero
+
+        media = soma / len(numeros)
+
+        return soma, media, maior, menor, qt_pares, soma_positivos
+
+    soma, media, maior, menor, qt_pares, soma_positivos = analisar_numeros(numeros)
+    print(f"\nNúmeros: {numeros}")
+    print(f"Soma: {soma}")
+    print(f"Média: {media:.2f}")
+    print(f"Maior: {maior}")
+    print(f"Menor: {menor}")
+    print(f"Quantidade de pares: {qt_pares}")
+    print(f"Soma dos positivos: {soma_positivos}")

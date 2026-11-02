@@ -1,0 +1,72 @@
+[
+    {
+        "nome": "Fone",
+        "preco": 85.0,
+        "estoque": 10
+    },
+    {
+        "nome": "Mouse",
+        "preco": 60.0,
+        "estoque": 1
+    },
+    {
+        "nome": "Teclado",
+        "preco": 120.0,
+        "estoque": 8
+    },
+    {
+        "nome": "Monitor",
+        "preco": 700.0,
+        "estoque": 3
+    },
+    {
+        "nome": "Headset",
+        "preco": 150.0,
+        "estoque": 5
+    },
+    {
+        "nome": "Teclado Mec\u00e2nico",
+        "preco": 250.9,
+        "estoque": 12
+    },
+    {
+        "nome": "Webcam",
+        "preco": 180.5,
+        "estoque": 7
+    },
+    {
+        "nome": "Webcam Gamer",
+        "preco": 100.0,
+        "estoque": 9
+    },
+    {
+        "nome": "Escada",
+        "preco": 30.0,
+        "estoque": 10
+    },
+    {
+        "nome": "Raquete",
+        "preco": 30.0,
+        "estoque": 20
+    },
+    {
+        "nome": "Tijolo",
+        "preco": 3.0,
+        "estoque": 9990
+    },
+    {
+        "nome": "Cadeira Gamer",
+        "preco": 850.0,
+        "estoque": 1
+    },
+    {
+        "nome": "Controle",
+        "preco": 20.0,
+        "estoque": 200
+    },
+    {
+        "nome": "Prato",
+        "preco": 9.0,
+        "estoque": 400
+    }
+]

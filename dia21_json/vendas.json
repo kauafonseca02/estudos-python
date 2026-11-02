@@ -1,0 +1,14 @@
+[
+    {
+        "produto": "Mouse",
+        "quantidade": 2,
+        "preco_unitario": 60.0,
+        "total": 120.0
+    },
+    {
+        "produto": "cadeira gamer",
+        "quantidade": 3,
+        "preco_unitario": 850.0,
+        "total": 2550.0
+    }
+]
