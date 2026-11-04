@@ -242,8 +242,54 @@ def faturamento_total():
 def exibir_faturamento():
     print(f"\nFaturamento total: R$ {faturamento_total():.2f}")
 
+def total_unidades_vendidas():
+    vendas = carregar_vendas()
+    total = 0
 
+    for venda in vendas:
+        total += venda['quantidade']
 
+    return total
+
+def exibir_total_unidades():
+    print(f"\nTotal de unidades vendidas: {total_unidades_vendidas()}")
+
+def produto_mais_vendido():
+    vendas = carregar_vendas()
+    produto_vendidos = {}
+
+    if not vendas:
+        return None, 0
+
+    for venda in vendas:
+        nome = venda['produto']
+        quantidade = venda['quantidade']
+    
+        if nome not in produto_vendidos:
+            produto_vendidos[nome] = quantidade
+        else:
+            produto_vendidos[nome] = produto_vendidos[nome] + quantidade
+
+    maior_quantidade = 0
+    nome_mais_vendido = ""
+
+    for nome, quantidade in produto_vendidos.items():
+
+        if quantidade > maior_quantidade:
+            maior_quantidade = quantidade
+            nome_mais_vendido = nome
+
+    return nome_mais_vendido, maior_quantidade
+        
+def exibir_produto_mais_vendido():
+    nome, quantidade = produto_mais_vendido()
+
+    if nome is None:
+        print("\nNenhuma venda registrada! ")
+        return
+
+    print(f"Produto mais vendido: {nome} | Unidades: {quantidade}")
+    
 while True:
     print("\n===== SISTEMA DE ESTOQUE FK =====")
     print("1 - Cadastrar produto")
@@ -254,7 +300,9 @@ while True:
     print("6 - Registrar venda")
     print("7 - Listar vendas")
     print("8 - Exibir faturamento")
-    print("9 - Sair")
+    print("9 - Exibir total de unidades vendidas")
+    print("10 - Exibir produto mais vendido")
+    print("11 - Sair")
 
     opcao = input("\nEscolha uma opção: ")
 
@@ -283,6 +331,12 @@ while True:
         exibir_faturamento()
 
     elif opcao == "9":
+        exibir_total_unidades()
+
+    elif opcao == "10":
+        exibir_produto_mais_vendido()
+
+    elif opcao == "11":
         print("\nSistema se encerrando... FK ")
         break
     else:
