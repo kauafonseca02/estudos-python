@@ -68,5 +68,10 @@
         "nome": "Prato",
         "preco": 9.0,
         "estoque": 400
+    },
+    {
+        "nome": "Caneta",
+        "preco": 5.0,
+        "estoque": 8
     }
 ]
